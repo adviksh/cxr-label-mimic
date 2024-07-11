@@ -3,14 +3,32 @@
         {
             "literal":"heart_failure",
             "category":"PROBLEM",
-            "pattern":[ {"LOWER": {"IN": ["chf", "failure",
-                                          "edema",
-                                          "effusion", "effusions", 
-                                          "congestion",
-                                          "heart", "cardiac", 
+            "pattern":[ {"LOWER": {"IN": ["chf", "failure"]}} ]
+        },
+        {
+            "literal":"edema",
+            "category":"PROBLEM"            
+        },
+        {
+            "literal":"congestion",
+            "category":"PROBLEM"            
+        },
+        {
+            "literal":"overload",
+            "category":"PROBLEM"            
+        },
+        {
+            "literal":"effusion",
+            "category":"PROBLEM",
+            "pattern":[ {"LOWER": {"IN": ["effusion", "effusions"]}}]
+        },
+        {
+            "literal":"heart",
+            "category":"PROBLEM",
+            "pattern":[ {"LOWER": {"IN": ["heart", "cardiac", 
                                           "cardiomediastinum", "mediastinum",
                                           "cardiomediastinal", "mediastinal",
-                                          "cardiomegaly"]}} ]
+                                          "cardiomegaly"]}}]
         },
         {
             "literal":"lungs",
