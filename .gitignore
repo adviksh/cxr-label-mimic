@@ -1,0 +1,101 @@
+# Singularity image
+*.sif
+
+# Raw and temp data
+raw/*
+data/*
+temp/*
+**/lightgbm.model
+
+## Documents
+**/*.pdf
+**/*.key
+**/*.ppt
+**/*.pptx
+**/*.doc
+**/*.docx
+graphs/*
+**/.virtual_documents/*
+
+# DS store files
+**/.DS_Store
+**/Rplots.pdf
+
+# Language models
+models/*
+
+# History files
+**/.Rhistory
+**/.Rapp.history
+
+# Session Data files
+**/*.RData
+**/*.rds
+**/*.sas
+**/*.lst
+
+# Python
+.python-version
+**/.ipynb_checkpoints/*
+**/__pycache__/*
+*.pyc
+
+# User-specific files
+.Ruserdata
+
+# Example code in package build process
+*-Ex.R
+
+# Output files from R CMD build
+/*.tar.gz
+
+# Output files from R CMD check
+/*.Rcheck/
+
+# RStudio files
+.Rproj.user
+.Rproj.user/
+.Rbuildignore
+
+# produced vignettes
+vignettes/*.html
+vignettes/*.pdf
+
+# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+.httr-oauth
+
+# knitr and R markdown default cache directories
+*_cache/
+/cache/
+
+# Temporary files created by R markdown
+*.utf8.md
+*.knit.md
+
+# R Environment Variables
+.Renviron
+
+
+## Core latex/pdflatex auxiliary files:
+**/*.aux
+**/*.lof
+**/*.log
+**/*.lot
+**/*.fls
+**/*.out
+**/*.toc
+**/*.fmt
+**/*.fot
+**/*.cb
+**/*.cb2
+**/.*.lb
+**/*.bbl
+**/*.bcf
+**/*.blg
+**/*.fdb_latexmk
+**/*.run.xml
+**/*.synctex.gz
+**/*.snm
+**/*.nav
+
+**/img/*

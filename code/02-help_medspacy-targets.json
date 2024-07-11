@@ -1,0 +1,24 @@
+{
+    "target_rules":[
+        {
+            "literal":"heart_failure",
+            "category":"PROBLEM",
+            "pattern":[ {"LOWER": {"IN": ["chf", "failure",
+                                          "edema",
+                                          "effusion", "effusions", 
+                                          "congestion",
+                                          "heart", "cardiac", 
+                                          "cardiomediastinum", "mediastinum",
+                                          "cardiomediastinal", "mediastinal",
+                                          "cardiomegaly"]}} ]
+        },
+        {
+            "literal":"lungs",
+            "category":"PROBLEM"
+        },
+        {
+            "literal":"process",
+            "category":"PROBLEM"            
+        }
+    ]
+}
