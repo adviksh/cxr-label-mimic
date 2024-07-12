@@ -11,7 +11,7 @@ include makefile_helpers
 DIR_TARGETS = temp temp/sentences code/log code/log/temp
 
 all: $(DIR_TARGETS)
-all: mimic_cxr_reports.csv
+all: temp/mimic_cxr_reports.csv
 all: code/log/02_find-problems.log
 
 
@@ -24,7 +24,7 @@ $(DIR_TARGETS):
 # ------------------------------------------------------------------------------
 # Break reports into sections
 # ------------------------------------------------------------------------------
-mimic_cxr_reports.csv: code/01_remove-indication.R
+temp/mimic_cxr_reports.csv: code/01_remove-indication.R
 	Rscript --vanilla --verbose $< > code/log/temp/$(call file_slug, $<).log 2>&1 && \
 	mv -f code/log/temp/$(call file_slug, $<).log code/log/$(call file_slug, $<).log
 	
