@@ -25,14 +25,16 @@ $(DIR_TARGETS):
 # Break reports into sections
 # ------------------------------------------------------------------------------
 mimic_cxr_reports.csv: code/01_remove-indication.R
-	$(call r,$<)
+	Rscript --vanilla --verbose $< > code/log/temp/$(call file_slug, $<).log 2>&1 && \
+	mv -f code/log/temp/$(call file_slug, $<).log code/log/$(call file_slug, $<).log
 	
 
 # ------------------------------------------------------------------------------
 # Extract sentences for each problem
 # ------------------------------------------------------------------------------
 code/log/02_find-problems.log: code/02_find-problems.py mimic_cxr_reports.csv
-	$(call python,$<)
+	python $< > code/log/temp/$(call file_slug, $<).log 2>&1 && \
+	mv -f code/log/temp/$(call file_slug, $<).log code/log/$(call file_slug, $<).log
 
 
 # ------------------------------------------------------------------------------
