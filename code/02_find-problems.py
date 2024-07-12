@@ -98,8 +98,7 @@ def main():
     # Read report text    
     logger.info("Loading reports...")    
     report_df = pl.read_csv(here('temp/mimic_cxr_reports.csv'),
-                            columns = ['study_id', 'body'])
-    report_df = report_df.head(10)
+                            columns = ['study_id', 'body'])    
     logger.info("Initializing pipeline...")
     nlp = init_pipeline()
     # Process
